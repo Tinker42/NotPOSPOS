@@ -35,3 +35,7 @@ void registerController::processOrder()
   cart->balance(option);
   screen.displayFinalReceipt(*cart);
 }
+
+void registerController::update(){
+  this->screen.displayRunningTotal(*cart);
+}
