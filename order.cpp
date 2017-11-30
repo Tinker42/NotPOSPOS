@@ -40,5 +40,6 @@ double order::getTotal() {
 
 double order::balance(double paid) {
   closed = true;
+  notifyObservers();
   return getTotal() - paid;
 }
